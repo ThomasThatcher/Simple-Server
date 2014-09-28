@@ -6,6 +6,7 @@ public class ServerThread extends Thread {
 	
 	public ServerThread(Server s){
 		super(s);
+			this.server = s;
 	}
 	
 }

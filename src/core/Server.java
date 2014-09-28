@@ -22,6 +22,12 @@ public class Server extends ServerSocket implements Runnable {
 			writer = new PrintWriter(socket.getOutputStream());
 			reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	}
+	
+	public void close() throws IOException{
+		writer.close();
+		reader.close();
+		socket.close();
+	}
 
 	public void addServerInputListener(ServerInputListener sil){
 		this.serverInputListener = sil;

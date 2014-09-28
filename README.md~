@@ -16,5 +16,12 @@ General Use:
 			}
 			
 		}, port));
+
+		st.start();
+
+		/*
+			Stop server by calling st.server.close(); and then, st.join();
+			Ensuring that all connections are closed. :)
+		*/
 		
 	}
